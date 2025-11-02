@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Basic 12-Column Website</title>
+  <title>Basic 12-Column Website with Horizontal Navbar</title>
 
   <style>
     /* --- General layout and reset --- */
@@ -34,6 +33,45 @@
     header {
       text-align: center;
     }
+
+    /* --- NAVBAR --- */
+    nav {
+      background: #222;
+      color: white;
+      display: flex;
+      justify-content: left; /* center items horizontally */
+      align-items: center;
+      padding: 10px 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex; /* makes items go side by side */
+      flex-direction: row; /* explicitly horizontal */
+      gap: 40px; /* space between items */
+    }
+
+    nav ul li {
+      display: inline-block;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+   nav ul li a:hover {
+  color: #ff4444;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 6px 12px;
+  border-radius: 6px;
+}
 
     /* --- Video box --- */
     .video-box {
@@ -87,6 +125,8 @@
       text-align: center;
       background: #222;
       color: white;
+      border-radius: 0;
+      box-shadow: none;
     }
 
     /* --- Responsive (mobile) --- */
@@ -94,10 +134,25 @@
       .video-box, .about-box {
         grid-column: 1 / span 12;
       }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
     }
   </style>
 </head>
 <body>
+
+  <!-- Horizontal Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Videos</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 
   <div class="container">
     <!-- Header -->
@@ -115,12 +170,11 @@
     <div class="about-box">
       <h2>About Us</h2>
       <p>
-        Welcome to our website! We specialize in creating modern and responsive trolling and humilation websites.
-        Our mission is to make the web simple, elegant, and accessible to everyone so that you too may rick rolll your friends.
+        Welcome to our website! We specialize in creating modern and responsive trolling and humor websites.
+        Our mission is to make the web simple, elegant, and accessible to everyone—so that you too may rickroll your friends.
       </p>
       <p>
-        Supports: $50 Astral. $12 Lost.
-      
+        Supports: $50 Astral | $12 Lost
       </p>
     </div>
 
@@ -131,7 +185,7 @@
     </footer>
   </div>
 
-  <!-- JavaScript to make the YouTube video playable -->
+  <!-- JavaScript for the YouTube video autoplay -->
   <script>
     const videoBox = document.getElementById('videoBox');
 

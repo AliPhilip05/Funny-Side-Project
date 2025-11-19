@@ -6,6 +6,7 @@ conn = sqlite3.connect("my_database.db")
 # Create a cursor object to execute SQL commands
 cursor = conn.cursor()
 
+# Create the databases if they do not already exist
 cursor.executescript("""CREATE TABLE IF NOT EXISTS Users (
     USER_ID INT PRIMARY KEY,
     NAME VARCHAR(255),
@@ -37,6 +38,8 @@ CREATE TABLE IF NOT EXISTS UserStatus (
     FOREIGN KEY (USER_ID) REFERENCES Users(USER_ID)
 );  
 """)
+ # Add code to add me and anothe person as admins
+cursor.execute("UPDATE TABLE ")
 
 conn.commit()
 conn.close()

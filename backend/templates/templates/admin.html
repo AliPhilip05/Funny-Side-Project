@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .table-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        table th {
+            background: #333;
+            color: white;
+        }
+
+        .section-title {
+            margin: 0;
+            font-size: 22px;
+            border-left: 5px solid #333;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Admin Dashboard</h1>
+
+<!-- USERS TABLE -->
+<div class="table-container">
+    <h2 class="section-title">Users</h2>
+    <table>
+        <tr>
+            <th>USER_ID</th>
+            <th>Name</th>
+            <th>Password</th>
+            <th>Email</th>
+            <th>DOB</th>
+        </tr>
+        <!-- Example row (you will replace with backend data) -->
+        <tr>
+            <td>1</td>
+            <td>John Doe</td>
+            <td>hashed_pw_123</td>
+            <td>john@example.com</td>
+            <td>1990-01-15</td>
+        </tr>
+    </table>
+</div>
+
+<!-- CONTACTS TABLE -->
+<div class="table-container">
+    <h2 class="section-title">User Contacts</h2>
+    <table>
+        <tr>
+            <th>CONTACT_ID</th>
+            <th>USER_ID</th>
+            <th>Address</th>
+            <th>Phone Number</th>
+        </tr>
+        <tr>
+            <td>101</td>
+            <td>1</td>
+            <td>123 Main Street</td>
+            <td>555-222-1111</td>
+        </tr>
+    </table>
+</div>
+
+<!-- ACCOUNTS TABLE -->
+<div class="table-container">
+    <h2 class="section-title">User Accounts</h2>
+    <table>
+        <tr>
+            <th>ACCOUNT_ID</th>
+            <th>USER_ID</th>
+            <th>Account Number</th>
+            <th>Account Type</th>
+            <th>Balance</th>
+        </tr>
+        <tr>
+            <td>501</td>
+            <td>1</td>
+            <td>ACC-12345</td>
+            <td>Checking</td>
+            <td>$1500.00</td>
+        </tr>
+    </table>
+</div>
+
+<!-- STATUS TABLE -->
+<div class="table-container">
+    <h2 class="section-title">User Status</h2>
+    <table>
+        <tr>
+            <th>USER_ID</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Active</td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
